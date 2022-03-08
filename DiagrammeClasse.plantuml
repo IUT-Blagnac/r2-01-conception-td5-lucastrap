@@ -1,0 +1,16 @@
+@startuml
+class Entreprise{
+
+}
+class Artisans{
+
+
+}
+Class Chantiers{
+
+
+}
+Entreprise->Artisans
+Artisans->Chantiers:affectation
+
+@enduml

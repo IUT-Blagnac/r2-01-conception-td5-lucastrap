@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="213px" preserveAspectRatio="none" style="width:835px;height:213px;background:#FFFFFF;" version="1.1" viewBox="0 0 835 213" width="835px" zoomAndPan="magnify"><defs/><g><g id="elem_g"><ellipse cx="511.1728" cy="43.3346" fill="#F1F1F1" rx="89.6728" ry="20.3346" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="440.6728" y="46.1812">Gérer ses Chantiers</text></g><g id="elem_c"><ellipse cx="89.995" cy="174.699" fill="#F1F1F1" rx="83.995" ry="19.199" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="25.7335" y="177.6356">Gérer ses artisans</text></g><g id="elem_a"><ellipse cx="675.9196" cy="174.6839" fill="#F1F1F1" rx="153.9196" ry="33.1839" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="242" x="553.39" y="169.859">Gérer quels artisans sont affectés</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="616.39" y="186.1558">à quels chantiers</text></g><g id="elem_af"><ellipse cx="347.7809" cy="174.5562" fill="#F1F1F1" rx="138.2809" ry="30.0562" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="246" x="224.7809" y="177.4029">Calculer automatiquement la paye</text></g><!--MD5=[4206b647878100e6066f92523e03a5d6]
+entity Entreprise--><g id="elem_Entreprise"><ellipse cx="348" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M348,22 L348,49 M335,30 L361,30 M348,49 L335,64 M348,49 L361,64 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="310" y="78.4951">Entreprise</text></g><!--MD5=[545f4d4fb419a8ec5e42c2564d028392]
+link Entreprise to c--><!--MD5=[545f4d4fb419a8ec5e42c2564d028392]
+link Entreprise to c--><g id="link_Entreprise_c"><path d="M309.916,59.298 C258.044,82.571 167.357,127.7475 119.989,153.7613 " fill="none" id="Entreprise-to-c-1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="115.543,156.2175,125.3549,155.3654,119.9192,153.7991,121.4855,148.3634,115.543,156.2175" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0d421e52a825c34dcfc5cd460cc298b3]
+link Entreprise to af--><!--MD5=[0d421e52a825c34dcfc5cd460cc298b3]
+link Entreprise to af--><g id="link_Entreprise_af"><path d="M336.315,81.812 C334.813,99.885 334.9,121.4432 336.575,139.1136 " fill="none" id="Entreprise-to-af-1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="337.147,144.4645,340.1691,135.0907,336.6163,139.4927,332.2143,135.9399,337.147,144.4645" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7164c984a0067deca1ef070f0e721290]
+link Entreprise to a--><!--MD5=[7164c984a0067deca1ef070f0e721290]
+link Entreprise to a--><g id="link_Entreprise_a"><path d="M386.057,81.035 C386.372,81.191 386.686,81.346 387,81.5 C444.267,109.518 512.199,132.5026 567.968,148.4904 " fill="none" id="Entreprise-to-a-1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="572.984,149.9188,565.4244,143.6059,568.1753,148.5488,563.2324,151.2998,572.984,149.9188" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[00c8f149603a4ed71e70a7f6a4cdee33]
+link Entreprise to g--><g id="link_Entreprise_g"><path d="M386.203,43.5 C396.166,43.5 406.129,43.5 416.092,43.5 " fill="none" id="Entreprise-to-g" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="421.302,43.5,412.302,39.5,416.302,43.5,412.302,47.5,421.302,43.5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8059ab66f175a28ee6c9e082750b8b69]
+@startuml
+usecase g as "Gérer ses Chantiers"
+usecase c as "Gérer ses artisans"
+usecase a as "Gérer quels artisans sont affectés\n à quels chantiers"
+usecase af as "Calculer automatiquement la paye"
+
+
+actor Entreprise 
+ 
+
+
+'Pour aligner les 2 acteurs :
+Entreprise -[hidden]-> c
+Entreprise -[hidden]-> af
+Entreprise -[hidden]-> a
+Entreprise -> g
+Entreprise -> af
+Entreprise -> a
+Entreprise -> c
+@enduml
+
+@startuml
+usecase g as "Gérer ses Chantiers"
+usecase c as "Gérer ses artisans"
+usecase a as "Gérer quels artisans sont affectés\n à quels chantiers"
+usecase af as "Calculer automatiquement la paye"
+
+
+actor Entreprise 
+ 
+
+
+Entreprise -[hidden]-> c
+Entreprise -[hidden]-> af
+Entreprise -[hidden]-> a
+Entreprise -> g
+Entreprise -> af
+Entreprise -> a
+Entreprise -> c
+@enduml
+
+PlantUML version 1.2022.2(Sat Mar 05 16:30:19 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
